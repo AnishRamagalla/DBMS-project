@@ -1,0 +1,29 @@
+package micro;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import javax.swing.JOptionPane;
+
+import java.sql.*;
+
+
+public class SqlConnector {
+	
+Connection con=null;
+    public static Connection  db() {
+    	try{  
+    		//step1 load the driver class  
+    		Class.forName("oracle.jdbc.OracleDriver");  
+    		     		  
+    		   //step2 create  the connection sailobject  
+        Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","soumitha","vasavi"); 
+       JOptionPane.showMessageDialog(null, "success");
+    		    		return con;
+    		}catch(Exception e){ System.out.println(e);
+    		return null;}  
+    		  
+
+ }
+    public static void main(String args[]) {
+    	db();
+    }
