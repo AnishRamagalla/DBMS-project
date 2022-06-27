@@ -1,0 +1,89 @@
+package micro;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class Sample {
+
+	private JFrame frame;
+	private JTextField txtSouniGatedCommunity;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Sample window = new Sample();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Sample() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(150,200,763,548);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JButton btnNewButton = new JButton("water tracking");
+		btnNewButton.setBackground(Color.CYAN);
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setBounds(95, 157, 173, 129);
+		frame.getContentPane().add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton(" sales and purchases");
+		btnNewButton_1.setBackground(Color.PINK);
+		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 19));
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_1.setBounds(446, 157, 155, 128);
+		frame.getContentPane().add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("parking");
+		btnNewButton_2.setBackground(Color.YELLOW);
+		btnNewButton_2.setFont(new Font("Tahoma", Font.BOLD, 25));
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_2.setBounds(95, 341, 179, 129);
+		frame.getContentPane().add(btnNewButton_2);
+		
+		txtSouniGatedCommunity = new JTextField();
+		txtSouniGatedCommunity.setFont(new Font("Tahoma", Font.BOLD, 35));
+		txtSouniGatedCommunity.setText("SOUNI GATED COMMUNITY");
+		txtSouniGatedCommunity.setBounds(118, 30, 504, 66);
+		frame.getContentPane().add(txtSouniGatedCommunity);
+		txtSouniGatedCommunity.setColumns(10);
+	}
+}
